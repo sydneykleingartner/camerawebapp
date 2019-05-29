@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Name of the application -->
+	<title>Project!!! rePhoto</title>
+
+	<!-- Link to the main style sheet -->
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+	<!-- Implementing the camera -->
+	<!-- <main id="camera"> -->
+
+   		<!-- Camera sensor -->
+  		<canvas id="camera--sensor"></canvas>
+
+  		<!-- Camera view -->
+      <video id="camera--view" autoplay playsinline></video>
+  
+  		<!-- Camera output -->
+  		<img src="//:0" alt="" id="camera--output">
+
+  		<!-- Button to start the camera -->
+  		<button id="camera--trigger">Take a picture!</button>
+
+      <!-- google developer website idea 
+      <script>
+        const player = document.getElementById('player');
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        const captureButton = document.getElementById('capture');
+
+        const constraints = {
+          video: true,
+        };
+
+        captureButton.addEventListener('click', () => {
+        //video frame to the canvas
+          context.drawImage(player, 0, 0, canvas.width, canvas.height);
+        });
+
+        //attach the video stream to the video element and autoplay
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then((stream) => {
+            player.srcObject = stream;
+          });
+        </script> -->
+
+  	<!--
+  		/*<script>
+  		const constraints = {
+  			video: true
+  		};
+
+  		const video = document.querySelector('video');
+
+  		navigator.mediaDevices.getUserMedia(constraints).
+  			then((stream) => {video.src.Object = stream});
+
+  		</script>
+
+  	-->
+
+  		<!-- Access of the camera -->
+  		<input type="file" accept="image/*capture=camera">
+
+  		<!-- rear facing camera-->
+  		<!-- <input type="file" name= image" accept="image/*" capture="environment"> -->
+
+  		<!-- front facing camera-->
+  		<!-- <input type="file" name= image" accept="image/*" capture="user"> -->
+
+	</main>
+
+	<!-- Reference to the JavaScript file -->
+	<script src="app.js"></script>
+
+</body>
+
+</html>
