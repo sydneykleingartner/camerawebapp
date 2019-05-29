@@ -1,5 +1,5 @@
 //default mode: front-facing camera
-var constraints = { video: { facingMode: "user"}, audio: false};
+var constraints = { video: { facingMode: "environment"}, audio: false};
 
 //ask for access to the camera (not audio)
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
