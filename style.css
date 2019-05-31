@@ -16,15 +16,7 @@ enable camera covering the entire screen
 }
 
 /*
-enable self-facing camera
-*/
-#camera--view, #camera--sensor, #camera--output{
-	transform: scaleX(-1);
-	filter: FlipH;
-}
-
-/*
-keep the camera button (colored teal) fixed on the screen
+keep the camera button (colored red) fixed on the screen
 add other style elements on the button is center bottom of screen
 */
 #camera--trigger{
@@ -40,6 +32,26 @@ add other style elements on the button is center bottom of screen
 	position: fixed;
 	bottom: 30px;
 	left: calc(50% - 100px);
+}
+
+/*
+stylistic details of the overlay
+*/
+#overlay{
+	/* half of the screen*/
+	width: 50%;
+	height: 100%;
+
+	background-color: white;
+	color: brown;
+	font-size: 40px;
+	padding: 500px 0;
+	text-align: center;
+	position: fixed;
+	border: 2px dashed brown;
+	margin: auto;
+	/*transparency*/
+	opacity: 0.3;
 }
 
 /*
