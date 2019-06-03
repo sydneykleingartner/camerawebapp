@@ -16,13 +16,13 @@ enable camera covering the entire screen
 }
 
 /*
-keep the camera button (colored red) fixed on the screen
+keep the camera button (colored white) fixed on the screen
 add other style elements on the button is center bottom of screen
 */
 #camera--trigger{
 	width: 200px;
-	background-color: brown;
-	color: white;
+	background-color: white;
+	color: black;
 	font-size: 22px;
 	border-radius: 30px;
 	border: none;
@@ -32,20 +32,18 @@ add other style elements on the button is center bottom of screen
 	position: fixed;
 	bottom: 30px;
 	left: calc(50% - 100px);
-	/* z-index changes the priority on the page - button over overlay*/
+	/*changes priority on the page - button over overlay*/
 	z-index: 1;
+	opacity: 0.6;
 }
 
 /*
 stylistic details of the overlay
 */
 #overlay{
-	/*overlay itself*/
 	background-image: tree.jpg;
 	background-repeat: no-repeat;
 	background-position: top;
-
-	/* half of the screen*/
 	width: 100%;
 	height: 100%;
 	position: relative;
@@ -53,10 +51,8 @@ stylistic details of the overlay
 	top: 0px;
 	left: 0px;
 	overflow: hidden;
-	/* z-index changes the priority on the page - overlay below button*/
+	/* change priority on the page - overlay below button*/
 	z-index: 0;
-
-	/*transparency*/
 	opacity: 0.3;
 }
 
@@ -67,7 +63,7 @@ styling for the image after it is taken
 	height: 100px!important;
 	width: 100px!important;
 	transition: all 0.5s ease-in;
-	border: solid 2px brown;
+	border: solid 2px white;
 	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
 	top: 20px;
 	right: 20px;
