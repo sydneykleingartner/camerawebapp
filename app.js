@@ -16,7 +16,7 @@ const cameraView = document.querySelector("#camera--view"),
 	  cameraTrigger = document.querySelector("#camera--trigger")
 
 
-//access the camera & stream to the cameraView
+//access the camera & stream to the camera view
 function cameraStart() {
 	navigator.mediaDevices
 		.getUserMedia(constraints)
@@ -30,7 +30,6 @@ function cameraStart() {
 }
 
 //take a picture when the button is tapped
-
 cameraTrigger.onclick = function() {
 	cameraSensor.width = cameraView.videoWidth;
 	cameraSensor.height = cameraView.videoHeight;
@@ -45,7 +44,7 @@ window.addEventListener("load", cameraStart, false);
 
 if ('serviceWorker' in navigator) {
 	console.log('CLIENT: service worker registration in progress.');
-	navigator.serviceWorker.register( '/camera-app/part-2/sw.js', { scope : ' '}).then(function() {
+	navigator.serviceWorker.register( 'app.js', { scope : ' '}).then(function() {
 		console.log('CLIENT: service worker registration complete.');
 	}, function() {
 		console.log('CLIENT: service worker registration failure.');

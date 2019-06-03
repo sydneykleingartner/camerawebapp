@@ -32,24 +32,30 @@ add other style elements on the button is center bottom of screen
 	position: fixed;
 	bottom: 30px;
 	left: calc(50% - 100px);
+	/* z-index changes the priority on the page - button over overlay*/
+	z-index: 1;
 }
 
 /*
 stylistic details of the overlay
 */
 #overlay{
-	/* half of the screen*/
-	width: 50%;
-	height: 100%;
+	/*overlay itself*/
+	background-image: tree.jpg;
+	background-repeat: no-repeat;
+	background-position: top;
 
-	background-color: white;
-	color: brown;
-	font-size: 40px;
-	padding: 500px 0;
-	text-align: center;
-	position: fixed;
-	border: 2px dashed brown;
-	margin: auto;
+	/* half of the screen*/
+	width: 100%;
+	height: 100%;
+	position: relative;
+	object-fit: cover;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	/* z-index changes the priority on the page - overlay below button*/
+	z-index: 0;
+
 	/*transparency*/
 	opacity: 0.3;
 }

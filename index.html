@@ -18,13 +18,13 @@
 <body>
 
 	<!-- Implementing the camera -->
-	<!-- <main id="camera"> -->
+	<main id="camera">
 
    		<!-- Camera sensor -->
   		<canvas id="camera--sensor"></canvas>
 
   		<!-- Camera view -->
-      	<video id="camera--view" autoplay playsinline></video>
+      <video id="camera--view" autoplay playsinline></video>
   
   		<!-- Camera output -->
   		<img src="//:0" alt="" id="camera--output">
@@ -32,11 +32,15 @@
   		<!-- Button to start the camera -->
   		<button id="camera--trigger">Take a picture!</button>
 
-  		<!-- Access of the camera -->
-  		<input type="file" accept="image/*capture=camera">
+  		<!-- Option to upload file -->
+  		<!-- <input type="file" accept="image/*capture=camera"> -->
 
   		<!-- overlay -->
-      	<div id="overlay"> This is the overlay! </div>
+      <div id="overlay">
+      	<a target="_blank" href="tree2.jpg">
+        		<img src="tree2.jpg" alt="Previous photo taken at this location" width=100% height=100%>
+    		</a>
+      </div>
 
 	</main>
 
