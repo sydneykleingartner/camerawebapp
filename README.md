@@ -1,6 +1,6 @@
 # camerawebapp
 
-Link: https://sydneykleingartner.github.io/camerawebapp/
+Link: https://gwuvision.com/camera_webapp/
 
 This web application currently displays the forward-facing camera of your device and allows you to snap photos that will be displayed in the top right corner.
 
