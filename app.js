@@ -38,6 +38,21 @@ cameraTrigger.onclick = function() {
 	cameraOutput.classList.add("taken");
 };
 
+//query String for the URL of the overlay image
+//String url = Request.QueryString("pic")
+/*function getImgURL() {
+	var urlParams = new URLSearchParams(window.location.search);
+	//get rid of ? at start of string
+	urlParams = urlParams.substring(1);
+}*/
+
+
+//maybe this will help?
+/* console.log(urlParams.has('post')); //true
+console.log(urlParams.get('action')); //"edit"
+console.log(urlParams.getAll('action')); //["edit"]
+console.log(urlParams.toString()); //"?http://projectrephoto.com/entryImage/37/1539/20120930_122255.jpg?rotatedAt1559660109472"
+console.log(urlParams.append('active', '1')); */
 
 //start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);

@@ -35,12 +35,28 @@
   		<!-- Option to upload file -->
   		<!-- <input type="file" accept="image/*capture=camera"> -->
 
-  		<!-- overlay -->
+      <!--#set var="chosenstyle" value="$QUERY_STRING" -->
+      <!-- <link rel="stylesheet" href="<!--#echo var="chosenstyle"-- .css" type="text/css">  -->
+
+      <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        //get rid of ? at start of string
+        urlParams = urlParams.substring(1);
+      </script>
+
+  		<!-- Overlay -->
       <div id="overlay">
-      	<a target="_blank" href="tree2.jpg">
-        		<img src="tree2.jpg" alt="Previous photo taken at this location" width=100% height=100%>
+      	<a target="_blank" href='http://projectrephoto.com/entryImage/28/1110/20141227_091400.jpg'>
+        		<img src='http://projectrephoto.com/entryImage/28/1110/20141227_091400.jpg' alt="Previous photo taken at this location" width=100% height=100%>
     		</a>
       </div>
+
+      <!-- Overlay using urlParams-->
+      <!-- <div id="overlay">
+        <a target="_blank" href= urlParams>
+            <img src= urlParams alt="Previous photo taken at this location" width=100% height=100%>
+        </a>
+      </div> -->
 
 	</main>
 

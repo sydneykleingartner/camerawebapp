@@ -3,12 +3,16 @@ from PIL import Image
 from scipy import ndimage
 from scipy import misc
 from matplotlib import pyplot as mp
+from io import BytesIO
+# import urlParams value from index.html
+from index import urlParams
 import matplotlib.pyplot as plt
 import numpy as np
+import requests
 
 # constructor for universal use of the half-image program
-# image : name of image to be altered , alt_image : name of altered image
 def __init__ (self, image, alt_image):
+# image : name of image to be altered , alt_image : name of altered image
 	self.image = image;
 	self.alt_image = alt_image;
 
@@ -18,7 +22,8 @@ def __init__ (self, image, alt_image):
 def main ():
 
 	# read in the image, convert to RGBA values, pixels as an array
-	pixels = np.array((Image.open('turtle.jpg')).convert('RGBA'))
+	response = requests.get(urlParams)
+	pixels = np.array(Image.open(BytesIO(response.content)).convert('RGBA'))
 	# use constructor to initialize image
 	# pixels = np.array((Image.open(image)).convert('RGBA'))
 
@@ -28,7 +33,9 @@ def main ():
 	# reassign the pixels to the image
 	# show and save the altered image
 	plt.imshow(pixels)
-	plt.imsave('turtle2.jpg', pixels)
+
+	#plt.imsave('giraffe.jpg', pixels)
+
 	# use constructor to initialize alt_image
 	# plt.imsave(self.alt_image, pixels)
 	plt.show()
